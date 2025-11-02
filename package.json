@@ -1,0 +1,22 @@
+{
+  "name": "devrel-experiment",
+  "version": "0.1.0",
+  "description": "DevRel Labs Experiment",
+  "private": true,
+  "scripts": {
+    "dev": "bend reactor serve --enable-tools --ts-watch --run-tests",
+    "build": "bend compile",
+    "test": "echo 'Use: bend package get-tests-results'",
+    "lint": "bend hs-eslint",
+    "typecheck": "echo 'Use: bend package ts-get-errors'"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
