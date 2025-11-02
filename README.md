@@ -90,14 +90,14 @@ Brief description of technical approach and key technologies used:
 
 ## Resources
 
-- [DevRel Labs Meta Repo](https://github.com/your-org/DevRel-Labs-Meta-Repo)
+- [DevRel Labs Meta Repo](https://github.com/hubspotdev/DevRel-Labs)
 - [Experiment Proposal Issue](#)
 - [HubSpot Frontend Documentation](https://product.hubteam.com/docs/frontend/)
 - [Bend Reactor Documentation](https://product.hubteam.com/docs/frontend/docs/bend.html)
 
 ## Contributing
 
-This is a DevRel Labs experiment. See the [main meta repo](https://github.com/your-org/DevRel-Labs-Meta-Repo) for participation guidelines.
+This is a DevRel Labs experiment. See the [main meta repo](https://github.com/hubspotdev/DevRel-Labs) for participation guidelines.
 
 ## Questions?
 
