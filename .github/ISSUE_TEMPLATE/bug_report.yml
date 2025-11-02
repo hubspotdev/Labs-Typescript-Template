@@ -1,0 +1,91 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in this experiment
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! This helps us improve the experiment.
+
+        **Note:** If this experiment uses Linear, this issue will sync automatically. Reference format: `DEVLABS-###`
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: "Describe what went wrong..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Run command '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "Describe the expected outcome..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Describe what actually occurred..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Low (minor issue, workaround available)
+        - Medium (affects functionality, workaround available)
+        - High (blocks important functionality)
+        - Critical (system unusable, no workaround)
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your development environment details
+      placeholder: |
+        - OS: [e.g., macOS 13.0, Ubuntu 22.04]
+        - Runtime version: [e.g., Java 11, Python 3.9, Node 18]
+        - Branch: [e.g., main, feature/xyz]
+        - Commit SHA: [if known]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Any error messages, stack traces, or logs
+      render: shell
+      placeholder: "Paste relevant logs here..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem (screenshots, related issues, etc.)
+      placeholder: "Add any other context here..."
