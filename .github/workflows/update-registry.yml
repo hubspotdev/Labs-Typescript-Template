@@ -1,0 +1,27 @@
+name: Update Registry on Merge
+
+on:
+  push:
+    branches: [main, master, dev]
+
+jobs:
+  update-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Notify meta repo of merge
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.META_REPO_PAT }}
+          repository: HubSpot/DevRel-Labs-Meta-Repo
+          event-type: experiment-merge
+          client-payload: |
+            {
+              "repository": "${{ github.repository }}",
+              "branch": "${{ github.ref_name }}",
+              "commit_sha": "${{ github.sha }}",
+              "commit_message": "${{ github.event.head_commit.message }}",
+              "pusher": "${{ github.event.pusher.name }}",
+              "timestamp": "${{ github.event.head_commit.timestamp }}"
+            }
