@@ -31,69 +31,11 @@ Brief description of what this experiment aims to accomplish.
 - HubSpot `bend` CLI tools
 - TypeScript knowledge
 
-### Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Or if using HubSpot's package manager
-hs-package-manager install
-```
-
-### Running
-
-```bash
-# Start development server with hot reload
-bend reactor serve --enable-tools --ts-watch
-
-# For development with tests running
-bend reactor serve --enable-tools --ts-watch --run-tests
-```
-
-### Type Checking
-
-```bash
-# Type check will happen automatically in watch mode
-# Or check manually (requires bend process running)
-# Use mcp__devex-mcp-server__bend_package_ts_get_errors tool
-```
-
-### Linting
-
-```bash
-# Run ESLint
-bend hs-eslint
-```
-
-### Testing
-
-```bash
-# Tests run automatically when using --run-tests flag
-# Or check test results (requires bend process running)
-# Use mcp__devex-mcp-server__bend_package_get_tests_results tool
-```
-
-### Building
-
-```bash
-# Compile the project (requires bend process running)
-# Use mcp__devex-mcp-server__bend_compile tool
-```
-
 ## Architecture
 
 Brief description of technical approach and key technologies used:
-- React + TypeScript
-- HubSpot `bend` build system
-- Testing with Jasmine and React Testing Library
+- TypeScript
 
-## Resources
-
-- [DevRel Labs Meta Repo](https://github.com/hubspotdev/DevRel-Labs)
-- [Experiment Proposal Issue](#)
-- [HubSpot Frontend Documentation](https://product.hubteam.com/docs/frontend/)
-- [Bend Reactor Documentation](https://product.hubteam.com/docs/frontend/docs/bend.html)
 
 ## Contributing
 

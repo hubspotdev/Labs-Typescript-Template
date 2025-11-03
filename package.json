@@ -4,16 +4,16 @@
   "description": "DevRel Labs Experiment",
   "private": true,
   "scripts": {
-    "dev": "bend reactor serve --enable-tools --ts-watch --run-tests",
-    "build": "bend compile",
-    "test": "echo 'Use: bend package get-tests-results'",
-    "lint": "bend hs-eslint",
-    "typecheck": "echo 'Use: bend package ts-get-errors'"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "typescript": "^5.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
   },
   "dependencies": {
     "react": "^18.0.0",
