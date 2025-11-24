@@ -8,10 +8,10 @@ jobs:
   update-registry:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1
 
       - name: Notify meta repo of merge
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0  # v3.0.0
         with:
           token: ${{ secrets.META_REPO_PAT }}
           repository: HubSpot/DevRel-Labs-Meta-Repo

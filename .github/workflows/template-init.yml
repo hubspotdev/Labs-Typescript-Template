@@ -9,7 +9,7 @@ jobs:
     # Only run if this is a new repo from template
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1
         with:
           fetch-depth: 0
 
@@ -24,7 +24,7 @@ jobs:
 
       - name: Notify meta repo of new experiment
         if: steps.check.outputs.initialized == 'false'
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0  # v3.0.0
         with:
           token: ${{ secrets.META_REPO_PAT }}
           repository: HubSpot/DevRel-Labs-Meta-Repo
@@ -33,16 +33,19 @@ jobs:
             {
               "repository": "${{ github.repository }}",
               "owner": "${{ github.repository_owner }}",
-              "template": "typescript",
+              "template": "java",
               "repo_url": "${{ github.event.repository.html_url }}",
               "created_at": "${{ github.event.repository.created_at }}"
             }
 
       - name: Create initialization marker
         if: steps.check.outputs.initialized == 'false'
+        env:
+          REPO_NAME: ${{ github.repository }}
         run: |
+          # Use environment variables to prevent injection
           echo "Initialized from DevRel Labs template on $(date)" > .template-initialized
-          echo "Repository: ${{ github.repository }}" >> .template-initialized
+          echo "Repository: $REPO_NAME" >> .template-initialized
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
